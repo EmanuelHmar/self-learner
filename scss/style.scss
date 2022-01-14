@@ -1,0 +1,130 @@
+//Variables
+$--primary-pale-blue: hsl(225, 100%, 94%);
+$--primary-bright-blue: hsl(245, 75%, 52%);
+$--nuetral-very-pale-blue: hsl(225, 100%, 98%);
+$--nuetral-desaturated-blue: hsl(224, 23%, 55%);
+$--nuetral-dark-blue: hsl(223, 47%, 23%);
+$--white: #fff;
+
+
+*, *::before, *::after {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+}
+
+body {
+       line-height: 1.6;
+       width: 100%;
+       height: 100vh;
+}
+
+.container {
+       width: 100%;
+       background: url(../images/pattern-background-desktop.svg);
+       background-repeat: no-repeat;
+       position: fixed;
+       top: 0;
+       left: 0;
+
+       .flexbox {
+              width: 100%;
+              height: 100vh;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: linear-gradient(hsla(225, 100%, 98%, 0.55));
+
+              .showcase {
+                     background: $--white;
+                     position: relative;
+                     max-width: 300px;
+                     min-height: 540px;
+                     border-radius: 1.2rem;
+                     z-index: 5;
+                     box-shadow: 0px 20px 50px $--nuetral-desaturated-blue;
+
+                     .illustration-img {
+                            position: relative;
+                            top: 0;
+                            width: 100%;
+                            border-top-left-radius: 1.2rem;
+                            border-top-right-radius: 1.2rem;
+                     }
+
+                     .summary {
+                            text-align: center;
+                            position: relative;
+                            top: 0;
+                            font-family: 'Poppins', sans-serif;
+                            h1 {
+                                   font-size: 1.5rem;
+                                   padding-top: 2rem;
+                            }
+                            p {
+                                   font-size: 13px;
+                                   padding: 1rem 1.9rem;
+                            }
+                     }
+                     
+                     .plan {
+                            display: flex;
+                            position: relative;
+                            justify-content: space-between;
+                            align-items: center;
+                            max-width: 80%;
+                            margin: 1.5em auto;
+                            font-family: 'Poppins', sans-serif;
+                            .annual-plan {
+                                   padding: 0 1rem;
+                                   h3 {
+                                          font-size: 15px;
+                                   }
+                            }
+                            .plan-changer-button {
+                                   font-weight: bold;
+                                   font-size: 0.8rem;
+                                   color: $--primary-bright-blue;
+                                   cursor: pointer;
+                            }
+                     }
+
+                     .pc-button {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: relative;
+                            flex-direction: column;
+                            .proceed-btn {
+                                   padding: 0.8rem 4.5rem;
+                                   margin: 1rem 0;
+                                   border-radius: 0.6rem;
+                                   border: none;
+                                   background: $--primary-bright-blue;
+                                   color: #fff;
+                                   font-weight: bold;
+                                   cursor: pointer;
+                                   box-shadow: 3px 8px 20px $--nuetral-desaturated-blue;
+                            }
+                            .cancel-btn {
+                                   border: none;
+                                   padding: 0.1rem;
+                                   margin: 0;
+                                   color: #666;
+                                   background: $--white;
+                                   font-weight: 900;
+                                   cursor: pointer;
+                                   background: transparent;
+                            }
+                     }
+              }
+       }
+}
+
+.attribution {
+       position: fixed;
+       z-index: 6;
+       bottom: 0;
+       left: 1rem;
+}
+
